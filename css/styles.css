@@ -111,7 +111,7 @@ button, .contacto {
 }
 
 button:hover, .contacto:hover {
-  background: var(--oro);
+  background: #f00e21;
 }
 
 /* Ventajas */
