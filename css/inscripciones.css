@@ -1,0 +1,245 @@
+/* Paleta de colores institucional */
+:root {
+  --rojo: #F23545;
+  --morado: #731742;
+  --oro: #4b350b;
+  --marron: #8C3D0F;
+  --gris-claro: #F2F2F2;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  color: #731742;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 2em;
+  background: #F23545;
+  box-shadow: 0 2px 12px #0002;
+}
+
+.navbar-logo {
+  flex: 0 0 auto;
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.navbar-title {
+  flex: 1;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+  font-size: 1.05em;
+}
+
+.navbar-links li a.active,
+.navbar-links li a:hover {
+  color: #4b350b;
+}
+
+/* Centrado del formulario */
+main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+}
+
+.form-container {
+  background: rgba(255,255,255,0.95);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px #0003;
+  padding: 2.5em 2em 2em 2em;
+  max-width: 580px; /* ancho fijo para PC */
+  width: 100%;
+  margin: 2em auto;
+}
+
+h1 {
+  text-align: center;
+  color: #F23545;
+  margin-bottom: 0.5em;
+  text-shadow: 1px 1px 2px #fff8;
+}
+
+ol {
+  color: #731742;
+  margin-bottom: 1.5em;
+}
+
+label {
+  display: block;
+  margin-bottom: 1em;
+  color: #F23545;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 4px;
+  border: 1px solid #731742;
+  margin-top: 0.3em;
+  font-size: 1em;
+  background: #F2F2F2;
+  color: #731742;
+  box-sizing: border-box;
+}
+
+button {
+  background: #F23545;
+  color: #fff;
+  border: none;
+  padding: 0.7em 1.5em;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+  margin-top: 1em;
+}
+
+button:hover {
+  background: #000000;
+}
+
+/* Footer siempre abajo */
+footer {
+  flex-shrink: 0;
+  background: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 1em 0;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+.footer-social {
+  gap: 2em;
+  margin-bottom: 1em;
+}
+
+.footer-social span {
+  font-weight: bold;
+  margin-right: 1em;
+}
+
+.footer-social a {
+  color: #000000;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin: 0 0.3em;
+  vertical-align: middle;
+  filter: brightness(0) invert(1);
+}
+
+/* Animaciones */
+.animate-slide {
+  animation: slideIn 1s;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(40px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* Menú hamburguesa */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  margin-left: 1em;
+}
+
+.navbar-toggle span {
+  display: block;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 900px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: var(--rojo);
+    position: absolute;
+    top: 70px; /* ajusta según la altura de tu navbar */
+    left: 0;
+    padding: 1em 0;
+    z-index: 10;
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .navbar-links li {
+    margin: 0.5em 0;
+    text-align: center;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-flex {
+    position: relative;
+  }
+
+  /* Para celular max-width 580px pero con padding para que no quede pegado */
+  .form-container {
+    max-width: 580px;
+    width: 90vw;
+    padding: 2em 1.5em;
+    margin: 2em auto;
+  }
+}

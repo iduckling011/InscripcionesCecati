@@ -1,0 +1,381 @@
+/* Paleta de colores institucional */
+:root {
+  --rojo: #F23545;
+  --morado: #731742;
+  --oro: #4b350b;
+  --marron: #8C3D0F;
+  --gris-claro: #F2F2F2;
+}
+
+/* Para evitar overflow por padding/margin */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: #731742;
+  position: relative;
+}
+
+/* Navbar */
+.navbar-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 2em;
+  background: var(--rojo);
+  box-shadow: 0 2px 12px #0002;
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  flex: 0 0 auto;
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.navbar-title {
+  flex: 1;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1001;
+}
+
+.navbar-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+  font-size: 1.05em;
+}
+
+.navbar-links li a.active,
+.navbar-links li a:hover {
+  color: var(--oro);
+}
+
+/* Contenedor principal para noticias */
+.noticias-contenedor {
+  max-width: 700px;
+  width: 90%;
+  margin: 2em auto 3em auto;
+  padding: 2em 2.5em;
+  background: rgba(255, 255, 255, 0.25); /* Fondo blanco semitransparente */
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #0001;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  z-index: 1;
+  position: relative;
+}
+
+/* Título principal dentro del contenedor */
+.noticias-contenedor h1 {
+  color: var(--rojo);
+  margin: 0;
+  text-align: center;
+  text-shadow: 1px 1px 2px #fff8;
+}
+
+/* Lista de noticias */
+.noticias-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+/* Cada artículo */
+.noticias-lista article {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #0001;
+  padding: 1.5em 1.5em 1em 1.5em;
+  border-left: 6px solid var(--rojo);
+  animation: fadeIn 1s;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.noticias-lista h2 {
+  color: var(--rojo);
+  margin-top: 0;
+}
+
+.noticias-lista p {
+  color: #000000;
+  margin-bottom: 0.5em;
+}
+
+.noticias-lista a {
+  color: var(--rojo);
+  text-decoration: underline;
+}
+
+.noticias-lista a:hover {
+  color: #A67C2E;
+}
+
+/* Footer */
+footer {
+  background: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 1em 0;
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: auto;
+  z-index: 1;
+  position: relative;
+}
+
+.footer-social {
+  gap: 2em;
+  margin-bottom: 1em;
+}
+
+.footer-social span {
+  font-weight: bold;
+  margin-right: 1em;
+}
+
+.footer-social a {
+  color: #000000;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin: 0 0.3em;
+  vertical-align: middle;
+  filter: brightness(0) invert(1);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade {
+  animation: fadeIn 1s;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .noticias-contenedor {
+    width: 95vw !important;
+    padding: 1.5em 1.5em !important;
+    margin: 1.5em auto !important;
+  }
+
+  .noticias-lista article {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 1em 1em !important;
+    font-size: 0.9em;
+  }
+
+  .navbar-title {
+    font-size: 1.2em;
+  }
+
+  .logo {
+    width: 50px;
+  }
+}
+
+/* Menú hamburguesa */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  margin-left: 1em;
+}
+
+.navbar-toggle span {
+  display: block;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+@media (max-width: 900px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: var(--rojo);
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 1em 0;
+    z-index: 10;
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .navbar-links li {
+    margin: 0.5em 0;
+    text-align: center;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-flex {
+    position: relative;
+  }
+}
+
+/* Fondo animado con fondo blanco y cubitos rojos */
+.area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background: white;
+  overflow: hidden;
+}
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: var(--rojo);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+  border-radius: 4px;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 4px;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}

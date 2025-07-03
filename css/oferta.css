@@ -1,0 +1,459 @@
+/* Paleta de colores institucional */
+:root {
+  --rojo: #F23545;
+  --morado: #731742;
+  --oro: #4b350b;
+  --marron: #8C3D0F;
+  --gris-claro: #F2F2F2;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #F2F2F2;
+  color: #731742;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar unificado */
+.navbar-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 2em;
+  background: #F23545;
+  box-shadow: 0 2px 12px #0002;
+}
+
+.navbar-logo {
+  flex: 0 0 auto;
+}
+
+.navbar-title {
+  flex: 1;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+  font-size: 1.05em;
+}
+
+.navbar-links li a.active,
+.navbar-links li a:hover {
+  color: #4b350b;
+}
+
+/* Header */
+header {
+  background: #F23545;
+  color: #ffffff;
+  padding: 1em 0;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 2px 12px #0002;
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+/* Contenido principal */
+main {
+  text-align: center;
+}
+
+.fondo-exterior {
+  width: 100%;
+  height: 350px;
+  background: url('../assets/afuera.jpg') center center/cover no-repeat;
+  margin-top: 2em;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #0002;
+}
+
+/* --- INICIO: Cajas de servicios estilo index --- */
+.info-cajas {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+  margin: 2em auto;
+  max-width: 1200px;
+  padding: 0 1em;
+}
+
+.info-caja {
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.info-caja:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.info-caja img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.info-caja h3 {
+  color: #731742;
+  margin: 0.8em 0 0.2em;
+}
+
+.info-caja p {
+  color: #333;
+  margin: 0 1em 1em;
+  font-size: 0.95em;
+}
+
+.info-caja ul {
+  text-align: left;
+  margin: 0 1.5em 1em 1.5em;
+  color: #731742;
+  font-size: 0.97em;
+  padding-left: 1.2em;
+}
+
+/* Responsive para cajas */
+@media (max-width: 900px) {
+  .info-cajas {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+  }
+
+  .info-caja {
+    width: 45%;
+    max-width: 300px;
+    margin-bottom: 1em;
+  }
+}
+/* --- FIN: Cajas de servicios estilo index --- */
+
+/* Footer igual que en index */
+footer {
+  background: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 1em 0;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-social {
+  gap: 2em;
+  margin-bottom: 1em;
+}
+
+.footer-social span {
+  font-weight: bold;
+  margin-right: 1em;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin: 0 0.3em;
+  vertical-align: middle;
+  filter: brightness(0) invert(1);
+}
+
+/* Animaciones */
+.animate-fade {
+  animation: fadeIn 1.2s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.animate-slide {
+  animation: slideIn 1s;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(40px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* Botones */
+button, .contacto {
+  background: #F23545;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 0.7em 1.5em;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+  text-decoration: none;
+  display: inline-block;
+  margin: 1em auto;
+}
+
+button:hover, .contacto:hover {
+  color: #fff;
+  transform: translateY(-3px) scale(1.04);
+}
+
+/* Nota: Para redirigir al hacer clic, usa un <a href="..."> o JS en el HTML */
+
+/* Formularios */
+input, select, textarea {
+  border: 1px solid #731742;
+  border-radius: 4px;
+  padding: 0.5em;
+  margin-top: 0.3em;
+  margin-bottom: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1em;
+  background: #F2F2F2;
+  color: #731742;
+}
+
+label {
+  font-weight: bold;
+  color: #F23545;
+}
+
+/* Texto */
+ul, ol {
+  color: #731742;
+}
+
+h1, h2, h3 {
+  color: #F23545;
+}
+
+a {
+  color: #ffffff;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffffff;
+
+}
+
+/* Fondo */
+.fondo {
+  background-image: url('https://images.pexels.com/photos/8093039/pexels-photo-8093039.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  mask-image: linear-gradient(rgb(0, 0, 0) 80%, transparent);
+  height: 1500px;
+  width: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fondo h2 {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  padding: 90px 0 30px 0;
+  font-size: 30px;
+  text-shadow: 2px 2px 2px black;
+}
+
+/* --- Puedes eliminar desde aquí hacia abajo si ya no usas las clases viejas --- */
+.servicio p,
+.servicio2 p,
+.servicio3 p {
+  text-shadow: none;
+  font-size: 13px;
+}
+
+.servicio img,
+.servicio2 img,
+.servicio3 img {
+  height: 190px;
+  width: 240px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.opciones,
+.opciones2,
+.opciones3 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 150px 0 0 0;
+  justify-content: space-evenly;
+}
+
+.opciones .servicio a,
+.opciones2 .servicio2 a,
+.opciones3 .servicio3 a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.opciones .servicio,
+.opciones2 .servicio2,
+.opciones3 .servicio3 {
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  object-fit: cover;
+  opacity: 0.4;
+  transition: 1.5s ease;
+  border: 4px double rgb(0, 0, 0);
+}
+
+.opciones .servicio:hover,
+.opciones2 .servicio2:hover,
+.opciones3 .servicio3:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+.servicio, .servicio2, .servicio3 {
+  width: 250px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  padding: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.servicio p, .servicio2 p, .servicio3 p {
+  word-break: break-word;
+  font-size: 1rem;
+  margin: 10px 0 0 0;
+  width: 100%;
+  line-height: 1.2;
+  color: #000 !important;
+  opacity: 1 !important;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #fff8;
+}
+
+.servicio-con-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-servicio {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 20px);
+  min-width: 280px;
+  max-width: 350px;
+  background: #fff;
+  color: #731742;
+  border-radius: 12px;
+  padding: 18px 20px;
+  font-size: 1em;
+  box-shadow: 0 4px 24px #0004;
+  border: 2px solid #F23545;
+  text-align: left;
+  z-index: 100;
+  transition: opacity 0.5s;
+}
+
+.servicio-con-info:hover .info-servicio {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* --- Fin de clases viejas --- */
+
+/* Menú hamburguesa */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  margin-left: 1em;
+}
+
+.navbar-toggle span {
+  display: block;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 900px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: var(--rojo);
+    position: absolute;
+    top: 70px; /* ajusta según la altura de tu navbar */
+    left: 0;
+    padding: 1em 0;
+    z-index: 10;
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .navbar-links li {
+    margin: 0.5em 0;
+    text-align: center;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-flex {
+    position: relative;
+  }
+}

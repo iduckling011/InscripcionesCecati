@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CECATI 186 | Inscripciones</title>
+  <link rel="stylesheet" href="css/inscripciones.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+<nav class="navbar-flex">
+  <div class="navbar-logo">
+    <img src="assets/logo.png" alt="Logo CECATI 186" class="logo">
+  </div>
+  <div class="navbar-title">
+    CECATI 186
+  </div>
+  <div class="navbar-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <ul class="navbar-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="empresa.html">La Empresa</a></li>
+    <li><a href="oferta.html">Oferta Educativa</a></li>
+    <li><a href="inscripciones.html" class="active">Inscripciones</a></li>
+    <li><a href="noticias.html">Noticias</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+  <main>
+    <div class="form-container">
+      <h1>Inscripciones</h1>
+      <ol>
+        <li>Selecciona tu curso.</li>
+        <li>Llena el formulario de inscripción.</li>
+        <li>Adjunta tus documentos.</li>
+        <li>Recibe confirmación por correo.</li>
+      </ol>
+      <form class="animate-slide" action="#" method="post">
+        <label>Nombre completo:
+          <input type="text" name="nombre" required>
+        </label>
+        <label>CURP:
+          <input type="text" name="curp" maxlength="18" required>
+        </label>
+        <label>Fecha de nacimiento:
+          <input type="date" name="fecha_nacimiento" required>
+        </label>
+        <label>Sexo:
+          <select name="sexo" required>
+            <option value="">Selecciona</option>
+            <option>Femenino</option>
+            <option>Masculino</option>
+            <option>Otro</option>
+          </select>
+        </label>
+        <label>Teléfono:
+          <input type="tel" name="telefono" pattern="[0-9]{10}" maxlength="10" required>
+        </label>
+        <label>Correo electrónico:
+          <input type="email" name="correo" required>
+        </label>
+        <label>Domicilio:
+          <input type="text" name="domicilio" required>
+        </label>
+        <label>Municipio:
+          <input type="text" name="municipio" required>
+        </label>
+        <label>Estado:
+          <input type="text" name="estado" required>
+        </label>
+        <label>Curso: 
+          <select name="curso" required>
+            <option>Administración</option>
+            <option>Alimentos y bebidas</option>
+            <option>Artesanías y acabados</option>
+            <option>Auxiliar de enfermería</option>
+            <option>Confección de prendas de vestir</option>
+            <option>Soporte técnico a equipos y sistemas computacionales</option>
+            <option>Cuidados cosmetológicos faciales y corporales</option>
+            <option>Estilismo y diseño de imagen</option>
+            <option>Informática</option>
+            <option>Producción artesanal de alimentos</option>
+            <option>Soporte de instalaciones y motores eléctricos</option>
+            <option>Uso de lengua inglesa en diversos contextos</option>
+          </select>
+        </label>
+        <label>Escolaridad:
+          <select name="escolaridad" required>
+            <option value="">Selecciona</option>
+            <option>Primaria</option>
+            <option>Secundaria</option>
+            <option>Preparatoria/Bachillerato</option>
+            <option>Licenciatura</option>
+            <option>Otro</option>
+          </select>
+        </label>
+        <label>¿Cómo te enteraste del curso?
+          <select name="difusion">
+            <option value="">Selecciona</option>
+            <option>Facebook</option>
+            <option>Instagram</option>
+            <option>Recomendación</option>
+            <option>Página web</option>
+            <option>Otro</option>
+          </select>
+        </label>
+        <button type="submit">Enviar inscripción</button>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-social">
+      <span>Síguenos</span>
+      <a href="https://www.facebook.com/" target="_blank">
+        <img src="assets/facebook.png" alt="Facebook" class="icon">
+      </a>
+      <a href="https://www.instagram.com/" target="_blank">
+        <img src="assets/instagram.png" alt="Instagram" class="icon">
+      </a>
+      <a href="https://www.youtube.com/" target="_blank">
+        <img src="assets/youtube.png" alt="YouTube" class="icon">
+      </a>
+    </div>
+    <p>&copy; 2025 CECATI 186 | Todos los derechos reservados.</p>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

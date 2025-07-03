@@ -1,0 +1,228 @@
+/* Paleta de colores institucional */
+:root {
+  --rojo: #F23545;
+  --morado: #731742;
+  --oro: #4b350b;
+  --marron: #8C3D0F;
+  --gris-claro: #F2F2F2;
+}
+
+/* General */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background: url('https://images.pexels.com/photos/8093039/pexels-photo-8093039.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center fixed;
+  background-size: cover;
+  color: var(--morado);
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAV */
+.navbar-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 2em;
+  background: var(--rojo);
+  box-shadow: 0 2px 12px #0002;
+  position: relative;
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.navbar-title {
+  flex: 1;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.05em;
+  transition: color 0.2s;
+}
+
+.navbar-links li a.active,
+.navbar-links li a:hover {
+  color: var(--oro);
+}
+
+/* Presentación */
+.presentacion-cecati {
+  max-width: 1200px;
+  margin: 2em auto;
+  padding: 2em;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 4px 24px #0003;
+}
+
+.presentacion-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2em;
+}
+
+.presentacion-contenido .texto {
+  flex: 1 1 500px;
+}
+
+.presentacion-contenido .texto h1 {
+  font-size: 2.2em;
+  margin-bottom: 0.5em;
+  color: var(--rojo);
+  text-shadow: 1px 1px 2px #fff8;
+}
+
+.presentacion-contenido .texto span {
+  color: var(--morado);
+}
+
+.presentacion-contenido .texto p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #731742;
+}
+
+.presentacion-contenido .texto .descripcion {
+  margin-top: 1em;
+  text-align: justify;
+}
+
+.presentacion-contenido .texto ul {
+  margin: 1em 0 1em 1.5em;
+  color: #731742;
+}
+
+.presentacion-contenido .imagen {
+  flex: 1 1 350px;
+  text-align: center;
+}
+
+.presentacion-contenido .imagen img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #0002;
+}
+
+/* Footer */
+footer {
+  flex-shrink: 0;
+  background: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 1em 0;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+.footer-social {
+  gap: 2em;
+  margin-bottom: 1em;
+}
+
+.footer-social span {
+  font-weight: bold;
+  margin-right: 1em;
+}
+
+.footer-social a {
+  color: #000000;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin: 0 0.3em;
+  vertical-align: middle;
+  filter: brightness(0) invert(1);
+}
+
+/* Menú hamburguesa */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  margin-left: 1em;
+}
+
+.navbar-toggle span {
+  display: block;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 900px) {
+  .presentacion-contenido {
+    flex-direction: column;
+    align-items: center;
+  }
+  .presentacion-cecati {
+    padding: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  .navbar-title {
+    font-size: 1.2em;
+  }
+  .logo {
+    width: 50px;
+  }
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: var(--rojo);
+    position: absolute;
+    top: 70px; /* ajusta según la altura de tu navbar */
+    left: 0;
+    padding: 1em 0;
+    z-index: 10;
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .navbar-links li {
+    margin: 0.5em 0;
+    text-align: center;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-flex {
+    position: relative;
+  }
+}

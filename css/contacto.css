@@ -1,0 +1,344 @@
+/* Paleta de colores institucional */
+:root {
+  --rojo: #F23545;
+  --morado: #731742;
+  --oro: #4b350b;
+  --marron: #8C3D0F;
+  --gris-claro: #F2F2F2;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #F2F2F2;
+  color: #731742;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 2em;
+  background: #F23545;
+  box-shadow: 0 2px 12px #0002;
+}
+
+.navbar-logo {
+  flex: 0 0 auto;
+}
+
+.navbar-title {
+  flex: 1;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+  font-size: 1.05em;
+}
+
+.navbar-links li a.active,
+.navbar-links li a:hover {
+  color: #4b350b;
+}
+
+/* Logo */
+.logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+/* Main */
+main.contacto {
+  text-align: center;
+  padding: 2em 0 0 0;
+}
+
+h1 {
+  color: #F23545;
+  margin-bottom: 1em;
+}
+
+/* Contacto: Formulario y datos a la mitad */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2em;
+  max-width: 1200px;
+  margin: 0 auto 2em auto;
+}
+
+.contact-form {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #0002;
+  padding: 2em 2em 1.5em 2em;
+  flex: 1 1 340px;
+  min-width: 320px;
+  max-width: 420px;
+  margin-bottom: 2em;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-form h2 {
+  color: #F23545;
+  margin-bottom: 1em;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+  font-weight: bold;
+  color: #F23545;
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.6em;
+  border: 1px solid #731742;
+  border-radius: 6px;
+  font-size: 1em;
+  margin-bottom: 0.7em;
+  background: #F2F2F2;
+  color: #731742;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.contact-form button {
+  background: #F23545;
+  color: #fff;
+  border: none;
+  padding: 0.7em 1.5em;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  margin-top: 1em;
+  box-shadow: 0 2px 8px #0002;
+}
+
+.contact-form button:hover {
+  background: #000000;
+  box-shadow: 0 4px 16px #A67C2E88;
+}
+
+/* Información de contacto */
+.box-hd {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #0002;
+  padding: 2em 2em 1.5em 2em;
+  flex: 1 1 340px;
+  min-width: 320px;
+  max-width: 520px;
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+  align-items: center;
+  align-self: stretch;
+}
+
+.parrafo {
+  color: #731742;
+  font-size: 1em;
+  margin-bottom: 1em;
+  text-align: left;
+}
+
+.btn-especialidad {
+  display: inline-block;
+  background: #F23545;
+  color: #fff;
+  padding: 0.6em 1.3em;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 0.5em;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-especialidad:hover {
+  background: #000000;
+  color: #fff;
+}
+
+/* Mapa */
+.mapa-contacto {
+  width: 100%;
+  max-width: 600px;
+  margin: 2em auto 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px #0002;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapa-contacto iframe {
+  width: 100%;
+  min-height: 320px;
+  height: 350px;
+  border: 0;
+  display: block;
+  border-radius: 16px;
+}
+
+.ver-mapa {
+  display: block;
+  text-align: center;
+  margin: 0.5em auto 0 auto;
+  color: #F23545;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 1em;
+  transition: color 0.2s;
+}
+.ver-mapa:hover {
+  color: #A67C2E;
+}
+
+/* Footer */
+footer {
+  background: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 1em 0;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-social {
+  gap: 2em;
+  margin-bottom: 1em;
+}
+
+.footer-social span {
+  font-weight: bold;
+  margin-right: 1em;
+}
+
+.footer-social a {
+  color: #000000;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin: 0 0.3em;
+  vertical-align: middle;
+  filter: brightness(0) invert(1);
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    padding: 0 1.5em; /* margen interno para separar de la orilla */
+    box-sizing: border-box;
+  }
+
+  .contact-form,
+  .box-hd {
+    width: 100%;
+    max-width: 700px; /* más ancho pero sin rebasar */
+    padding: 1.5em;
+    box-sizing: border-box;
+    margin: 0 auto; /* centrado */
+  }
+
+  .mapa-contacto {
+    width: 100%;
+    max-width: 700px;
+    margin: 1em auto 0 auto;
+  }
+
+  .mapa-contacto iframe {
+    height: 250px;
+    min-height: 200px;
+  }
+}
+
+/* Menú hamburguesa */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  margin-left: 1em;
+}
+
+.navbar-toggle span {
+  display: block;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 900px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: var(--rojo);
+    position: absolute;
+    top: 70px; /* ajusta según la altura de tu navbar */
+    left: 0;
+    padding: 1em 0;
+    z-index: 10;
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .navbar-links li {
+    margin: 0.5em 0;
+    text-align: center;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-flex {
+    position: relative;
+  }
+}
